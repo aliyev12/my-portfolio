@@ -4,7 +4,7 @@ $opacityOfMenu: 0.9;
 .menu-btn {
     position: absolute;
     z-index: 3;
-    right: 35px;
+    right: 25px;
     top: 35px;
     cursor: pointer;
     @include easeOut;
@@ -16,6 +16,8 @@ $opacityOfMenu: 0.9;
         height: 3px;
         margin: 0 0 5px 0;
         background: $third-color;
+        // Optional argument below for when you need an adjustable color
+        // background: set-text-color($primary-color);
         @include easeOut;
     }
 
@@ -143,6 +145,7 @@ $opacityOfMenu: 0.9;
         padding: 1rem 0;
         font-weight: 300;
         color: $fourth-color;
+        // color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 

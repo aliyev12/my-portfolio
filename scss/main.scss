@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 html {
     font-size: 16px;
@@ -14,6 +13,10 @@ body {
     @include background;
     background: $primary-color;
     color: $third-color;
+    // Propertyy below is commented out because it is designed to change color of text
+    // based on the background color. So, if the background color becoms too light or dark, text colors change to black or white accordingly
+    // I don't need it for now because I'm not changing the background color, but I may need it someday...
+    //color: set-text-color($third-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,14 +58,15 @@ header {
 
 main {
     padding: 4rem;
-    height: 100%;
+    //height: 100%;
+    min-height:  calc(100vh - 60px);
 
     .icons {
         margin-top: 1rem;
 
         a {
             padding: 0.4rem;
-            color: $fourth-color;
+            color: $secondary-color;
 
             &:hover {
                 color: $third-color;
@@ -79,3 +83,52 @@ main {
         }
     }
 }
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bioimage bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+    
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+    
+    .job-1 {
+        grid-area: job1;
+    }
+    
+    .job-2  {
+        grid-area: job2;
+    }
+    
+    .job-3 {
+        grid-area: job3;
+    }
+    
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    //color: set-text-color($primary-color);
+    height: 60px;
+}
+
+@import 'mobile';
