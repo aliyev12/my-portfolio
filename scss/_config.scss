@@ -1,0 +1,39 @@
+$primary-color: #B8CFF9;
+$secondary-color: #1155D4;
+$third-color: #0D2148;
+$fourth-color: #FFFFFF;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.9;
+
+// primary:  #FFFFFF
+// second:   #B8CFF9
+// third:  #598FF2
+// fourth:   ##1155D4
+// fifth:    #0D2148
+// The vh unit is not supported in IE8 and earlier.
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
+
