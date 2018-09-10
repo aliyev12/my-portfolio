@@ -2,15 +2,11 @@ $primary-color: #B8CFF9;
 $secondary-color: #1155D4;
 $third-color: #0D2148;
 $fourth-color: #FFFFFF;
+$fifth-color: #598FF2;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
 
-// primary:  #FFFFFF
-// second:   #B8CFF9
-// third:  #598FF2
-// fourth:   ##1155D4
-// fifth:    #0D2148
 // The vh unit is not supported in IE8 and earlier.
 @mixin easeOut {
     transition: all 0.5s ease-out;
