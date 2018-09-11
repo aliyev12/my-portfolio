@@ -205,6 +205,25 @@ main {
       border-color: #1155D4;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1rem 1rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 0.5rem;
+      background: #1155D4;
+      color: #FFFFFF; }
+      .boxes div:hover span {
+        color: #FFFFFF; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
@@ -238,7 +257,7 @@ main {
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
-@media screen and (min-width: 501) and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   main {
     align-items: center;
     text-align: center; }
