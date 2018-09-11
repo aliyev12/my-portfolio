@@ -3,7 +3,7 @@ $secondary-color: #1155D4;
 $third-color: #0D2148;
 $fourth-color: #FFFFFF;
 $fifth-color: #598FF2;
-$sixth-color: #7BA7F9;
+$sixth-color: #85AEF9;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.9;
@@ -51,7 +51,7 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaMd {
-    @media screen and (max-width: 500px) {
+    @media screen and (min-width: 501) and (max-width: 500px) {
         @content;
     }
 }
